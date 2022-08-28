@@ -1,0 +1,17 @@
+*.gz
+*.bz2
+*.xz
+*.zip
+*.exe
+*.tgz
+*.tbz2
+*.tbz
+*.txz
+*.Z
+
+*.log
+*.class
+*.jar
+*.war
+*.pyc
+
