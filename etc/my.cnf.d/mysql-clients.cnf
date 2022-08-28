@@ -1,0 +1,28 @@
+#
+# These groups are read by MariaDB command-line tools
+# Use it for options that affect only one utility
+#
+
+[mysql]
+socket=MYSQL_INSTALLDIR/data/mysql.sock
+
+[mysql_upgrade]
+socket=MYSQL_INSTALLDIR/data/mysql.sock
+
+[mysqladmin]
+socket=MYSQL_INSTALLDIR/data/mysql.sock
+
+[mysqlbinlog]
+socket=MYSQL_INSTALLDIR/data/mysql.sock
+
+[mysqlcheck]
+
+[mysqldump]
+socket=MYSQL_INSTALLDIR/data/mysql.sock
+
+[mysqlimport]
+
+[mysqlshow]
+
+[mysqlslap]
+

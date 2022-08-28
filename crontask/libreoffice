@@ -1,0 +1,1 @@
+0 2,13 * * * OFFICE_INSTALL_DIR/job_start_libreoffice.sh > OFFICE_INSTALL_DIR/cron.log 2>&1
