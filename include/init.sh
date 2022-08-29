@@ -17,6 +17,9 @@ source "${INSTALLER_ROOT}/crontask/cron.sh"
 
 
 function _cleanup {
+  # 取消注册ERR事件监听，防止循环执行这个函数
+  trap - ERR
+
   rm -rf /tmp/tmp.*
 
   local pids=( "$$" )
@@ -43,7 +46,8 @@ function _cleanup {
     done
   done
 
-  kill ${pids[@]} 2>/dev/null
+  # 如果进程数是1，就说明没有未结束的子进程
+  [[ ${#pids[@]} -gt 1 ]] && kill ${pids[@]} 2>/dev/null
 }
 
 function _init_logs {
